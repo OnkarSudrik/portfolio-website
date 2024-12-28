@@ -26,25 +26,17 @@ const Hero = () => {
         Hi, I'm Onkar Sudrik
       </h2>
 
-      {/* 
-        Fixed the spelling from "machine learnig" to "machine learning".
-        Adjusted the copy for clarity.
-      */}
       <p className="text-lg md:text-xl mb-8 w-full">
         A passionate{' '}
         <span
           className="font-semibold"
           style={{ color: 'var(--color-primary)' }}
         >
-          machine learning developer
+          machine learning engineer
         </span>{' '}
-        crafting modern, user-friendly websites and applications.
+        building intelligent, data-driven solutions to solve real-world problems.
       </p>
 
-      {/* 
-        If you have a /projects route in React Router, you may want
-        <Link to="/projects"> instead of href="#projects"
-      */}
       <a
         href="#projects"
         className="
