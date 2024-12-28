@@ -1,0 +1,30 @@
+[
+    {
+      "id": "1",
+      "title": "Project One",
+      "description": "Description for project one. Built with React, Node, and Tailwind.",
+      "image": "https://via.placeholder.com/300x200",
+      "detailsMarkdown": "/markdown/project-one.md",
+      "liveLink": "https://example.com/project-one",
+      "repoLink": "https://github.com/yourusername/project-one"
+    },
+    {
+      "id": "2",
+      "title": "Project Two",
+      "description": "Description for project two. A full-stack application deployed on AWS.",
+      "image": "https://via.placeholder.com/300x200",
+      "detailsMarkdown": "/markdown/project-two.md",
+      "liveLink": "https://example.com/project-two",
+      "repoLink": "https://github.com/yourusername/project-two"
+    },
+    {
+        "id": "3",
+        "title": "Project Two",
+        "description": "Description for project two. A full-stack application deployed on AWS.",
+        "image": "https://via.placeholder.com/300x200",
+        "detailsMarkdown": "/markdown/project-two.md",
+        "liveLink": "https://example.com/project-two",
+        "repoLink": "https://github.com/yourusername/project-two"
+      }
+  ]
+  
