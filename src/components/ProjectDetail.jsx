@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
@@ -13,7 +14,6 @@ const ProjectDetail = () => {
 
   useEffect(() => {
     if (project && project.detailsMarkdown) {
-      // Fetch the markdown file from your public folder
       fetch(project.detailsMarkdown)
         .then((res) => res.text())
         .then((text) => setMarkdown(text))
@@ -28,7 +28,7 @@ const ProjectDetail = () => {
         style={{
           backgroundColor: 'var(--color-bg-section)',
           color: 'var(--color-text-darkBg)',
-          minHeight: '100vh'
+          minHeight: '100vh',
         }}
       >
         <h2 className="text-xl">Project not found.</h2>
@@ -49,7 +49,7 @@ const ProjectDetail = () => {
       style={{
         backgroundColor: 'var(--color-bg-section)',
         color: 'var(--color-text-darkBg)',
-        minHeight: '100vh'
+        minHeight: '100vh',
       }}
     >
       <div className="max-w-3xl mx-auto">
@@ -68,13 +68,11 @@ const ProjectDetail = () => {
           />
         )}
 
-        {/* Render the Markdown content */}
         <article className="prose max-w-none">
           <ReactMarkdown>{markdown}</ReactMarkdown>
         </article>
 
         <div className="mt-8 flex gap-4">
-          {/* Live Demo Button */}
           {project.liveLink && (
             <a
               href={project.liveLink}
@@ -89,14 +87,13 @@ const ProjectDetail = () => {
               "
               style={{
                 backgroundColor: 'var(--color-primary)',
-                color: 'var(--color-bg-section)'
+                color: 'var(--color-bg-section)',
               }}
             >
               Live Demo
             </a>
           )}
 
-          {/* Repo Link Button */}
           {project.repoLink && (
             <a
               href={project.repoLink}
@@ -117,7 +114,6 @@ const ProjectDetail = () => {
           )}
         </div>
 
-        {/* Back to Projects Link */}
         <div className="mt-8">
           <Link
             to="/projects"
@@ -133,3 +129,4 @@ const ProjectDetail = () => {
 };
 
 export default ProjectDetail;
+

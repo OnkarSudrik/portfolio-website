@@ -5,24 +5,26 @@ const ProjectCard = ({ project }) => {
   return (
     <div
       className="
-        p-6 rounded-lg
-        flex flex-col
+        p-6
+        rounded-lg
+        flex
+        flex-col
         shadow-lg
         hover:shadow-xl
         transition-shadow
       "
       style={{
         backgroundColor: 'var(--color-bg-section)',
-        border: '1px solid rgba(255, 255, 255, 0.1)'
+        border: '1px solid rgba(255, 255, 255, 0.1)',
       }}
     >
-      {/* Optional preview image */}
       {project.image && (
         <img
           src={project.image}
           alt={project.title}
           className="
-            rounded mb-4
+            rounded
+            mb-4
             object-cover
             w-full
             h-48
@@ -39,26 +41,24 @@ const ProjectCard = ({ project }) => {
       </p>
 
       <div className="flex gap-3 mt-4">
-        {/* View Project -> navigates to detail page */}
         <Link
           to={`/projects/${project.id}`}
           className="
             inline-block
             px-4 py-2
             rounded
-            text-sm font-bold
+            text-sm
+            font-bold
             transition-colors
             hover:opacity-80
           "
           style={{
             backgroundColor: 'var(--color-primary)',
-            color: 'var(--color-bg-section)'
+            color: 'var(--color-bg-section)',
           }}
         >
           View Project
         </Link>
-
-        {/* Optional live link */}
         {project.liveLink && (
           <a
             href={project.liveLink}
@@ -68,7 +68,8 @@ const ProjectCard = ({ project }) => {
               inline-block
               px-4 py-2
               rounded
-              text-sm font-bold
+              text-sm
+              font-bold
               transition-colors
               bg-accent
               text-primaryBg
