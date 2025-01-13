@@ -1,0 +1,136 @@
+/* style.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Font Settings */
+:root {
+  font-family: 'Poppins', sans-serif;
+  --main-bg-color: theme('colors.dark.DEFAULT');
+  --main-text-color: theme('colors.light.DEFAULT');
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+/* Navbar Specific Styles */
+.navbar {
+  display: flex;
+  opacity: 0;
+  transform: translateY(-100%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  min-height: 60px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--main-bg-color);
+  box-shadow: 0 0 10px rgba(91, 207, 87, 0.7), 0 0 20px rgba(91, 207, 87, 0.5);
+  z-index: 50;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  padding: 1rem;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: block;
+  }
+  
+  .desktop-menu {
+    display: none;
+  }
+  
+  .mobile-nav-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-bg-color);
+    padding: 1rem;
+  }
+  
+  .mobile-nav-items.active {
+    display: block;
+  }
+}
+
+.nav-link {
+  font-weight: 600;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link.active {
+  color: #5bcf57;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #5bcf57;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #5bcf57;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+/* Section and Container Styling */
+section {
+  margin-bottom: 2rem;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
