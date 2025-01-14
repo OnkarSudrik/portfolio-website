@@ -1,4 +1,3 @@
-// src/components/Experience.jsx
 export default class Experience {
   constructor() {
     this.render();
@@ -20,11 +19,11 @@ export default class Experience {
                 <h3 class="text-light font-semibold text-lg md:text-xl mb-1 text-center">Programming Languages</h3>
                 <div class="flex flex-wrap gap-0.5 md:gap-1 justify-around">
                   ${this.createExperienceArticle("Python", "Experienced", "/assets/python.gif")}
-                  ${this.createExperienceArticle("R", "Intermediate")}
-                  ${this.createExperienceArticle("SQL", "Intermediate")}
-                  ${this.createExperienceArticle("C#", "Basic")}
-                  ${this.createExperienceArticle("C++", "Basic")}
-                  ${this.createExperienceArticle("Java", "Basic")}
+                  ${this.createExperienceArticle("R", "Intermediate", "/assets/R.png")}
+                  ${this.createExperienceArticle("SQL", "Intermediate", "/assets/sql.png")}
+                  ${this.createExperienceArticle("C#", "Basic", "/assets/csharp.png")}
+                  ${this.createExperienceArticle("C++", "Basic", "/assets/c++.png")}
+                  ${this.createExperienceArticle("JavaScript", "Basic","/assets/javascript.gif")}
                 </div>
               </div>
               <div>
@@ -32,10 +31,10 @@ export default class Experience {
                 <div class="flex flex-wrap gap-0.5 md:gap-1 justify-around">
                   ${this.createExperienceArticle("React", "Intermediate", "/assets/react.png")}
                   ${this.createExperienceArticle("TensorFlow", "Intermediate", "/assets/Tensorflow.png")}
-                  ${this.createExperienceArticle("Keras", "Intermediate")}
+                  ${this.createExperienceArticle("Keras", "Intermediate", "/assets/keras.png")}
                   ${this.createExperienceArticle("Pytorch", "Intermediate", "/assets/Pytorch.png")}
-                  ${this.createExperienceArticle("Scikit-learn", "Experienced")}
-                  ${this.createExperienceArticle("OpenCV", "Experienced")}
+                  ${this.createExperienceArticle("Scikit-learn", "Experienced", "/assets/scikitlearn.png")}
+                  ${this.createExperienceArticle("OpenCV", "Experienced","/assets/opencv.png")}
                 </div>
               </div>
               <div>
@@ -45,36 +44,39 @@ export default class Experience {
                   ${this.createExperienceArticle("AWS", "Intermediate", "/assets/AWS.png")}
                   ${this.createExperienceArticle("Streamlit", "Intermediate", "/assets/streamlit.png")}
                   ${this.createExperienceArticle("Flask", "Intermediate", "/assets/flask.png")}
-                  ${this.createExperienceArticle("MongoDB", "Intermediate")}
+                  ${this.createExperienceArticle("MongoDB", "Intermediate", "/assets/mongodb.png")}
                   ${this.createExperienceArticle("Docker", "Intermediate", "/assets/docker.png")}
                   ${this.createExperienceArticle("Node.js", "Intermediate", "/assets/nodejs.png")}
-                  ${this.createExperienceArticle("IBM Watsonx", "Basic")}
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Artificial Intelligence Section -->
-          <div class="p-4 md:p-5 bg-dark-lighter rounded-3xl border border-accent shadow-custom" data-aos="fade-right">
+          <div class="p-4 md:p-5 bg-dark-lighter rounded-3xl border border-accent shadow-custom md:col-span-1 col-span-full" data-aos="fade-right">
             <h2 class="text-light font-semibold text-xl md:text-2xl mb-4 text-center">Artificial Intelligence</h2>
-            <div class="flex flex-wrap gap-0.5 md:gap-1 justify-around">
-              ${this.createExperienceArticle("Model Deployment", "Experienced")}
-              ${this.createExperienceArticle("Multi-Agent Systems", "Experienced")}
-              ${this.createExperienceArticle("Cloud Integration", "Intermediate")}
-              ${this.createExperienceArticle("JNLP and Computer Vision", "Basic")}
-              ${this.createExperienceArticle("Advanced Algorithms", "Basic")}
+            <div class="overflow-x-auto">
+              <div class="flex flex-row flex-nowrap gap-2 pb-2 min-w-min justify-start md:justify-center">
+                ${this.createExperienceArticle("Model Deployment", "", "/assets/modeldeployement.gif")}
+                ${this.createExperienceArticle("Multi-Agent Systems", "", "/assets/multiagent.gif")}
+                ${this.createExperienceArticle("Cloud Integration", "", "/assets/cloudintegration.gif")}
+                ${this.createExperienceArticle("JNLP and Computer Vision", "", "/assets/computervision.gif")}
+                ${this.createExperienceArticle("Advanced Algorithms", "", "/assets/advancealgorithims.png")}
+              </div>
             </div>
           </div>
 
           <!-- Machine Learning Section -->
-          <div class="p-4 md:p-5 bg-dark-lighter rounded-3xl border border-accent shadow-custom" data-aos="fade-up">
+          <div class="p-4 md:p-5 bg-dark-lighter rounded-3xl border border-accent shadow-custom md:col-span-1 col-span-full" data-aos="fade-up">
             <h2 class="text-light font-semibold text-xl md:text-2xl mb-4 text-center">Machine Learning</h2>
-            <div class="flex flex-wrap gap-0.5 md:gap-1 justify-around">
-              ${this.createExperienceArticle("Model Development", "Experienced")}
-              ${this.createExperienceArticle("Feature Engineering", "Intermediate")}
-              ${this.createExperienceArticle("Statistical Analysis", "Intermediate")}
-              ${this.createExperienceArticle("Model Evaluation", "Intermediate")}
-              ${this.createExperienceArticle("Data Management", "Intermediate")}
+            <div class="overflow-x-auto">
+              <div class="flex flex-row flex-nowrap gap-2 pb-2 min-w-min justify-start md:justify-center">
+                ${this.createExperienceArticle("Model Development", "", "/assets/modeldevelopement.png")}
+                ${this.createExperienceArticle("Feature Engineering", "", "/assets/featureenginnering.gif")}
+                ${this.createExperienceArticle("Statistical Analysis", "", "/assets/statisticalanalysis.gif")}
+                ${this.createExperienceArticle("Model Evaluation", "", "/assets/modelevaluation.gif")}
+                ${this.createExperienceArticle("Data Management", "", "/assets/datamanagement.gif")}
+              </div>
             </div>
           </div>
         </div>
@@ -91,15 +93,15 @@ export default class Experience {
 
   createExperienceArticle(skill, level, iconPath = "/assets/checkmark.png") {
     return `
-      <article class="flex flex-col items-center w-28 md:w-36 gap-0 animate-scaleIn">
+      <article class="flex-shrink-0 flex flex-col items-center w-24 sm:w-28 md:w-32 lg:w-36 gap-1 animate-scaleIn hover:scale-105 transition-transform">
         <img
           src="${iconPath}"
           alt="Experience icon"
-          class="h-14 w-14 md:h-16 md:w-16"
+          class="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16"
         />
-        <div>
-          <h3 class="text-light text-center text-xs md:text-sm">${skill}</h3>
-          <p class="text-light-darker text-center text-xs">${level}</p>
+        <div class="text-center">
+          <h3 class="text-light text-xs md:text-sm leading-tight">${skill}</h3>
+          ${level ? `<p class="text-light-darker text-xs leading-tight">${level}</p>` : ''}
         </div>
       </article>
     `;

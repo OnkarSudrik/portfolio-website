@@ -1,4 +1,3 @@
-// src/components/Projects.js
 export default class Projects {
   constructor() {
     this.render();
@@ -19,28 +18,32 @@ export default class Projects {
               "project-1.jpg", 
               "fade-right",
               "1",
-              "Market Value Insights"
+              "Market Value Insights",
+              "https://github.com/OnkarSudrik/Predictive-Housing-Price-Analysis"
             )}
             ${this.createProjectCard(
               "Recognition", 
               "project-2.webp", 
               "fade-up",
               "2",
-              "Real Time Face Recognition"
+              "Real Time Face Recognition",
+              "https://github.com/OnkarSudrik/RealTime-Face-Recognition"
             )}
             ${this.createProjectCard(
               "Detection", 
               "project-3.webp", 
               "fade-left",
               "3",
-              "Anomaly Detection"
+              "Anomaly Detection",
+              "https://github.com/OnkarSudrik/Anomaly-Detection-In-Financial-Transactions"
             )}
             ${this.createProjectCard(
               "Risk Mitigation", 
               "project-4.webp", 
               "fade-right",
               "4",
-              "Credit Default Prediction"
+              "Credit Default Prediction",
+              "https://github.com/OnkarSudrik/Credit-Risk-Analysis"
             )}
           </div>
         </div>
@@ -55,7 +58,7 @@ export default class Projects {
     `;
   }
 
-  createProjectCard(title, image, animation, id, description) {
+  createProjectCard(title, image, animation, id, description, githubLink) {
     return `
       <button 
         class="w-[350px] min-w-[350px] p-6 bg-dark-lighter rounded-3xl border border-accent shadow-custom cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-lg" 
@@ -75,11 +78,15 @@ export default class Projects {
         <p class="text-light-darker text-center mb-4">${description}</p>
         
         <div class="flex justify-center gap-4">
-          <span
+          <a
+            href="${githubLink}"
+            target="_blank"
+            rel="noopener noreferrer"
             class="btn btn-primary bg-transparent border border-[#5bcf57] text-[#5bcf57] transition-all duration-300 hover:bg-[#5bcf57] hover:text-white hover:shadow-[0_0_15px_rgba(91,207,87,0.5)]"
+            onclick="event.stopPropagation()"
           >
             Github
-          </span>
+          </a>
         </div>
       </button>
     `;

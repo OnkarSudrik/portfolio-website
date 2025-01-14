@@ -1,4 +1,3 @@
-// Profile.js
 export default class Profile {
   constructor() {
     this.render();
@@ -18,7 +17,7 @@ export default class Profile {
           />
         </div>
         
-        <div class="self-center text-center mt-8 lg:mt-0 slide-in-right z-10">
+        <div class="self-center text-center mt-4 lg:mt-0 slide-in-right z-10">
           <p id="profile-hello" class="text-accent font-semibold text-lg md:text-xl"></p>
           <h1 id="profile-name" class="text-4xl md:text-5xl text-center text-light mb-4"></h1>
           <p id="profile-role" class="text-xl md:text-2xl mb-4 text-light font-semibold"></p>
@@ -61,6 +60,7 @@ export default class Profile {
     this.initTypewriterAnimation();
   }
 
+  // Rest of the code remains exactly the same...
   initTypewriterAnimation() {
     const elements = [
       { id: 'profile-hello', text: "Hello, I'm" },
@@ -94,7 +94,7 @@ export default class Profile {
   }
 }
 
-// Add CSS for animations and effects
+// Styles remain exactly the same
 const style = document.createElement('style');
 style.innerHTML = `
   .blinking-cursor {
