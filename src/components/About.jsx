@@ -47,7 +47,8 @@ export default class About {
             <div class="text-justify sm:text-left space-y-4" data-aos="fade-up">
               <p class="text-light-darker text-sm sm:text-base leading-relaxed">
                 As an experienced data professional, I specialize in predictive modeling, data analysis, and AI-driven solutions. 
-                My educational background includes an MSc in Artificial Intelligence from Royal Holloway University of London and a BSc in Information Technology from the University of Mumbai.
+                My educational background includes an MSc in Artificial Intelligence from Royal Holloway University of London and a BSc in Information Technology from the 
+                SVKM's Narsee Monjee College of Commerce and Economics (University of Mumbai)
               </p>
               <p class="text-light-darker text-sm sm:text-base leading-relaxed">
                 With a commitment to delivering accurate and impactful results, I have honed my skills 

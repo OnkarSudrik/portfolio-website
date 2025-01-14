@@ -29,6 +29,9 @@ export default class Navbar {
               <a href="#projects" class="nav-link block py-2 md:py-0 text-center hover:text-accent transition-colors">Projects</a>
             </li>
             <li class="w-full md:w-auto">
+              <a href="#medium-articles" class="nav-link block py-2 md:py-0 text-center hover:text-accent transition-colors">Articles</a>
+            </li>
+            <li class="w-full md:w-auto">
               <a href="#contact" class="nav-link block py-2 md:py-0 text-center hover:text-accent transition-colors">Contact</a>
             </li>
           </ul>

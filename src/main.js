@@ -6,6 +6,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import MediumArticles from './components/MediumArticles';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new About();
     new Experience();
     new Projects();
+    new MediumArticles();
     new Contact();
     new Footer();
   } catch (error) {
